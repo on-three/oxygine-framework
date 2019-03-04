@@ -135,6 +135,10 @@ namespace oxygine
 
     spEventDispatcher _dispatcher;
 
+    #if !defined(OX_NO_MT)
+    static pthread_t _mainThread;
+    #endif
+
     namespace key
     {
         void update();
