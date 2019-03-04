@@ -386,7 +386,6 @@ namespace oxygine
     void ProgressBar::serialize(serializedata* data)
     {
         inherited::serialize(data);
-        pugi::xml_node node = data->node;
         data->node.set_name("ProgressBar");
         data->node.append_attribute("progress").set_value(_progress);
         data->node.append_attribute("direction").set_value((int)_direction);

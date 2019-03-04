@@ -37,7 +37,7 @@ namespace oxygine
         return r;
     }
 
-    RenderStateCache::RenderStateCache() : _blend(blend_disabled), _program(0)
+    RenderStateCache::RenderStateCache() : _program(0), _blend(blend_disabled)
     {
         reset();
     }
@@ -501,7 +501,7 @@ namespace oxygine
 
 
 
-    STDRenderer::STDRenderer(IVideoDriver* driver) : _driver(driver), _vdecl(0), _uberShader(0), _useCustomIndices(false)
+    STDRenderer::STDRenderer(IVideoDriver* driver) : _useCustomIndices(false), _vdecl(0), _driver(driver), _uberShader(0) 
     {
         if (!driver)
             driver = IVideoDriver::instance;

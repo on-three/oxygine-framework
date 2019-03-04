@@ -3,7 +3,7 @@
 
 namespace oxygine
 {
-    Font::Font() : _size(0), _baselineDistance(0), _scale(1.0f), _sdf(false), _ignoreOptions(true)
+    Font::Font() : _ignoreOptions(true), _scale(1.0f), _sdf(false), _size(0), _baselineDistance(0)
     {
     }
 

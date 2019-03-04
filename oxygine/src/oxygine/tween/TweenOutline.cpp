@@ -65,7 +65,7 @@ namespace oxygine
 
 
             IVideoDriver* driver = IVideoDriver::instance;
-            const VertexDeclarationGL* decl = static_cast<const VertexDeclarationGL*>(IVideoDriver::instance->getVertexDeclaration(vertexPCT2::FORMAT));
+            //const VertexDeclarationGL* decl = static_cast<const VertexDeclarationGL*>(IVideoDriver::instance->getVertexDeclaration(vertexPCT2::FORMAT));
 
             _downsample = 1;
 

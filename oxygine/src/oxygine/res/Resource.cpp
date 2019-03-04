@@ -5,7 +5,7 @@
 
 namespace oxygine
 {
-    Resource::Resource(): _loadCounter(0), _useLoadCounter(false), _parent(0)
+    Resource::Resource(): _parent(0), _loadCounter(0), _useLoadCounter(false) 
     {
 
     }

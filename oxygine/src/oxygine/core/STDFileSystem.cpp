@@ -157,7 +157,6 @@ namespace oxygine
         {
 #ifndef WIN32
             DIR* d = opendir(path);
-            size_t path_len = strlen(path);
             int r = -1;
 
             if (d)

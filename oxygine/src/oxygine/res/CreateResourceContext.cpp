@@ -34,22 +34,21 @@ namespace oxygine
         bool alpha,
         pugi::xml_node xml, pugi::xml_node meta) :
 
-        _rootMeta(meta),
+        _xmlFolder(xmlFolder),
+        _path(path),
         _root(xml),
+        _rootMeta(meta),
         _notStarted(true),
         _notStartedMeta(true),
         _scaleFactor(scaleFactor),
         _load(load),
-        _alphaHitTest(alpha),
-        _xmlFolder(xmlFolder),
-        _path(path)
+        _alphaHitTest(alpha)
     {
         //_alphaTracking = true;
     }
 
     const char* isRelative(const char* str)
     {
-        const char* str_ = str;
         if (*str == '.')
         {
             ++str;
@@ -209,12 +208,9 @@ namespace oxygine
         Image* src = task->src.get();
         NativeTexture* dest = task->dest.get();
 
-        bool done = false;
-
         if (isCompressedFormat(src->getFormat()))
         {
             dest->init(src->lock(), false);
-            done = true;
         }
         else
         {

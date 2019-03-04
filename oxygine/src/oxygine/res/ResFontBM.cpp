@@ -55,7 +55,7 @@ namespace oxygine
     }
 
 
-    ResFontBM::ResFontBM(): _font(0), _format(TF_R8G8B8A8), _premultipliedAlpha(false), _sdf(false)
+    ResFontBM::ResFontBM(): _font(0), _sdf(false), _format(TF_R8G8B8A8), _premultipliedAlpha(false)
     {
 
     }

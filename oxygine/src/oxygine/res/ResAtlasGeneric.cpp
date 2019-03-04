@@ -255,15 +255,9 @@ namespace oxygine
 
         atlas_data ad;
 
-
         TextureFormat tf = string2TextureFormat(format);
 
-
-        bool compressed = false;
-
-
         std::vector<ResAnim*> anims;
-
 
         while (true)
         {
@@ -300,9 +294,6 @@ namespace oxygine
             int rows = 0;
             int frame_width = 0;
             int frame_height = 0;
-            float frame_scale = 1.0f;
-            bool loaded = false;
-
 
             file::buffer bf;
             file::read(walker.getPath("file"), bf);

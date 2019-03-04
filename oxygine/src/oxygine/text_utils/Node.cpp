@@ -85,7 +85,6 @@ namespace oxygine
             Node* node = _firstChild;
             while (node)
             {
-                int num = 0;
                 Symbol* res = node->getSymbol(pos);
                 if (res)
                     return res;

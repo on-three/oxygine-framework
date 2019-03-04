@@ -44,7 +44,7 @@ namespace oxygine
     void serializeImage(const ImageData& im, file::buffer& bf, const char* format)
     {
 #ifdef OX_HAVE_LIBJPEG
-        char* filename = (char*)"test_jpeg.jpg";
+        //char* filename = (char*)"test_jpeg.jpg";
         int quality    = 50;
 
         struct jpeg_compress_struct cinfo;    // basic info for JPEG properties

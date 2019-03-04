@@ -39,7 +39,6 @@ namespace oxygine
     bool ShaderProgramGL::getShaderBuildLog(GLuint shader, std::string& str)
     {
         GLint length = 0;
-        GLint success = GL_TRUE;
         oxglGetShaderiv(shader, GL_INFO_LOG_LENGTH, &length);
         if (length)
         {
@@ -59,7 +58,6 @@ namespace oxygine
     bool ShaderProgramGL::getProgramBuildLog(GLuint program, std::string& str)
     {
         GLint length = 0;
-        GLint success = GL_TRUE;
         oxglGetProgramiv(program, GL_INFO_LOG_LENGTH, &length);
         if (length)
         {

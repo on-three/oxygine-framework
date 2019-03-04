@@ -30,7 +30,7 @@ namespace oxygine
         pthread_mutex_unlock(&_mutex);
     }
 
-    ThreadDispatcher::ThreadDispatcher(): _id(0), _result(0)
+    ThreadDispatcher::ThreadDispatcher(): _result(0), _id(0)
     {
 #ifndef OX_NO_MT
         pthread_cond_init(&_cond, 0);

@@ -29,15 +29,15 @@ namespace oxygine
     }
 
     Actor::Actor():
+        _rdelegate(STDRenderDelegate::instance),
+        _stage(0),
+        _flags(flag_visible | flag_touchEnabled | flag_touchChildrenEnabled | flag_fastTransform),
+        _alpha(255),
         _extendedIsOn(0),
-        _zOrder(0),
+        _parent(0),
         _scale(1, 1),
         _rotation(0),
-        _flags(flag_visible | flag_touchEnabled | flag_touchChildrenEnabled | flag_fastTransform),
-        _parent(0),
-        _alpha(255),
-        _stage(0),
-        _rdelegate(STDRenderDelegate::instance)
+        _zOrder(0)
     {
         _transform.identity();
         _transformInvert.identity();
@@ -1541,7 +1541,6 @@ namespace oxygine
         scale.y = sqrtf(t.b * t.b + t.d * t.d);
 
         angle = -atan2(t.c, t.a);
-        float an = angle / MATH_PI * 180;
         pos.x = t.x;
         pos.y = t.y;
     }

@@ -134,7 +134,7 @@ namespace oxygine
 
     }
 
-    ImageData::ImageData(int W, int H, int Pitch, TextureFormat Format, void* Data): w(W), h(H), pitch(Pitch), format(Format), data((unsigned char*)Data)
+    ImageData::ImageData(int W, int H, int Pitch, TextureFormat Format, void* Data): w(W), h(H), pitch(Pitch), data((unsigned char*)Data), format(Format) 
     {
         bytespp = getBytesPerPixel(Format);
     }

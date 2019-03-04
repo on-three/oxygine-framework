@@ -19,7 +19,7 @@ namespace oxygine
 
         void render(Actor* actor, const RenderState& rs) override
         {
-            STDRenderDelegate* mat = STDRenderDelegate::instance;
+            //STDRenderDelegate* mat = STDRenderDelegate::instance;
             STDRenderer* renderer = STDRenderer::getCurrent();
 
 
@@ -33,10 +33,9 @@ namespace oxygine
                       _pp._screen.getWidth() / (float)_pp._rt->getWidth() / _downsample,
                       _pp._screen.getHeight() / (float)_pp._rt->getHeight() / _downsample);
 
-            RectF dest = _pp._screen.cast<RectF>();
+            //RectF dest = _pp._screen.cast<RectF>();
 
             rsCache().setBlendMode(blend_premultiplied_alpha);
-
 
             AffineTransform tr = _pp._transform * _actor->computeGlobalTransform();
             renderer->setTransform(tr);
@@ -57,7 +56,7 @@ namespace oxygine
 
 
             IVideoDriver* driver = IVideoDriver::instance;
-            const VertexDeclarationGL* decl = static_cast<const VertexDeclarationGL*>(IVideoDriver::instance->getVertexDeclaration(vertexPCT2::FORMAT));
+            //const VertexDeclarationGL* decl = static_cast<const VertexDeclarationGL*>(IVideoDriver::instance->getVertexDeclaration(vertexPCT2::FORMAT));
 
             _downsample = 1;
 
@@ -94,7 +93,7 @@ namespace oxygine
             pass(rt, rc, rt2, rc);
 
 
-            int alpha = lerp(0, 255, _progress);
+            //int alpha = lerp(0, 255, _progress);
             //logs::messageln("tween alpha %d", alpha);
 
             Color c = _color.withAlpha(64).premultiplied();

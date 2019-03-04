@@ -105,7 +105,7 @@ namespace oxygine
         ///Rect a = re
     }
 
-    MultiAtlas::MultiAtlas(createTextureCallback cb) : _bounds(0, 0, 0, 0), _skipSize(3), _cb(cb)
+    MultiAtlas::MultiAtlas(createTextureCallback cb) : _cb(cb), _bounds(0, 0, 0, 0), _skipSize(3)
     {
 
     }

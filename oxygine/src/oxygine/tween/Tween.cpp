@@ -5,13 +5,20 @@
 
 namespace oxygine
 {
-    Tween::Tween() : _duration(0),
+    Tween::Tween() : _status(status_not_started),
+        _elapsed(0),
+        _duration(0),
+        _delay(0),
         _loops(1),
 		_loopsDone(0),
-        _percent(0),
-        _status(status_not_started),
+        _ease(ease_linear),
+        _globalEase(ease_linear),
+        _twoSides(false),
         _disabledStatusDone(false),
-        _elapsed(0), _twoSides(false), _ease(ease_linear), _detach(false), _delay(0), _client(0), _globalEase(ease_linear)
+        _percent(0),
+        _detach(false),
+        
+        _client(0)
     {
 
     }

@@ -112,7 +112,7 @@ namespace oxygine
         *n = name;
     }
 
-    ObjectBase::ObjectBase(const ObjectBase& src): __id(0), __name(0)
+    ObjectBase::ObjectBase(const ObjectBase& src): __name(0), __id(0) 
     {
         __addToDebugList(this);
 

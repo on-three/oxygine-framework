@@ -338,8 +338,6 @@ namespace oxygine
 
             ShaderProgram* sp = driver->getShaderProgram();
 
-            if (postProcessItems.size() == 2)
-                int q = 0;
             //for (size_t i = 0; i < postProcessItems.size(); ++i)
             for (int i = postProcessItems.size() - 1; i >= 0 ; --i)
             {
@@ -393,7 +391,7 @@ namespace oxygine
         rsCache().setTexture(0, 0);
     }
 
-    PostProcess::PostProcess(const PostProcessOptions& opt) : _options(opt), _format(opt._format), _extend(2, 2)
+    PostProcess::PostProcess(const PostProcessOptions& opt) :  _extend(2, 2), _format(opt._format), _options(opt)
     {
     }
 
@@ -503,7 +501,7 @@ namespace oxygine
 
 
 
-    TweenPostProcess::TweenPostProcess(const PostProcessOptions& opt) : _pp(opt), _prevMaterial(0), _actor(0)
+    TweenPostProcess::TweenPostProcess(const PostProcessOptions& opt) : _actor(0), _pp(opt), _prevMaterial(0)
     {
     }
 
