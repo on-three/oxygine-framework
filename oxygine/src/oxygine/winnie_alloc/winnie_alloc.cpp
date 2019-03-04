@@ -29,7 +29,7 @@ namespace Detail
 
 using namespace Winnie::Config;
 
-const size_t first_os_block_size = 1 << first_os_block_size_log; 
+//const size_t first_os_block_size = 1 << first_os_block_size_log; 
 //const size_t max_os_block_num = 1 + 0x800000000/first_os_block_size; 
 const size_t max_os_block_num = 10240; 
 

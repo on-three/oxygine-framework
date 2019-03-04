@@ -135,8 +135,6 @@ namespace oxygine
 
     spEventDispatcher _dispatcher;
 
-    static pthread_t _mainThread;
-
     namespace key
     {
         void update();
