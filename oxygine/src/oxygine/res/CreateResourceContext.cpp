@@ -29,6 +29,7 @@ namespace oxygine
     XmlWalker::XmlWalker(
         const std::string* xmlFolder,
         const std::string& path,
+        const std::string& rootFolder,
         float scaleFactor,
         bool load,
         bool alpha,
@@ -36,6 +37,7 @@ namespace oxygine
 
         _xmlFolder(xmlFolder),
         _path(path),
+        _rootFolder(rootFolder),
         _root(xml),
         _rootMeta(meta),
         _notStarted(true),
@@ -83,7 +85,7 @@ namespace oxygine
             return *_xmlFolder + rl;
         }
 
-        return _path + str;
+        return _rootFolder + _path + str;
     }
 
     XmlWalker XmlWalker::next()
@@ -122,7 +124,7 @@ namespace oxygine
             break;
         }
 
-        return XmlWalker(_xmlFolder, _path, _scaleFactor, _load, _alphaHitTest, _last, _lastMeta);
+        return XmlWalker(_xmlFolder, _path, _rootFolder, _scaleFactor, _load, _alphaHitTest, _last, _lastMeta);
     }
 
     void XmlWalker::_checkSetAttributes(pugi::xml_node node)
